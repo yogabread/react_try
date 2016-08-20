@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  # root 'welcome#index'
+
+  resources :microposts
+  resources :groups
+  devise_for :users
+  resources :users
+  get 'users/:id' => 'users#show'
+  resources :welcome
+  root 'welcome#index'
 
   #   get 'products/:id' => 'catalog#view'
 

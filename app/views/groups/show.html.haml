@@ -1,0 +1,18 @@
+%p#notice= notice
+
+Group Name
+= @group.group_name
+%br
+
+Group Description
+= @group.group_description
+
+%p Members:
+%br
+
+
+= link_to "Add me to this group!", root_path
+
+= link_to 'Edit', edit_group_path(@group)
+\|
+= link_to 'Back', groups_path

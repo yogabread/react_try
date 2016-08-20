@@ -5,24 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: coder_development
+  database: react_try_development
 
 test:
   <<: *default
-  database: coder_test
-
-# On Heroku and other platform providers, you may have a full connection URL
-# available as an environment variable. For example:
-#
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
-#
-# You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  database: react_try_test
 
 production:
   <<: *default
-  database: coder_production
-  username: coder
-  password: <%= ENV['CODER_DATABASE_PASSWORD'] %>
+  database: react_try_production
+  username: react_try
+  password: <%= ENV['DEVISE_DATABASE_PASSWORD'] %>
