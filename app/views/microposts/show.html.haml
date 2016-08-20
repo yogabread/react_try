@@ -1,6 +1,7 @@
-%p#notice= notice
+- provide :title, "Post by #{@micropost.user.username}"
+- provide :header do
+  %h1
+    = "Post by #{@micropost.user.username}"
+    %small= format_time @micropost.created_at
 
-
-= link_to 'Edit', edit_micropost_path(@micropost)
-\|
-= link_to 'Back', microposts_path
+= render 'micropost', micropost: @micropost

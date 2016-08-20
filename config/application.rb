@@ -15,3 +15,9 @@ module Coder
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+module IdeaboxJs
+  class Application < Rails::Application
+    config.active_record.raise_in_transactional_callbacks = true
+  end
+end

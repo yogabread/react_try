@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   resources :welcome
   root 'welcome#index'
 
+
+  namespace :api do
+    namespace :v1 do
+      resources :microposts, only: [:index, :create, :destroy, :update]
+    end
+  end
+
   #   get 'products/:id' => 'catalog#view'
 
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
